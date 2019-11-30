@@ -22,7 +22,7 @@ class Main {
                     title: 'C4 model',
                     toolbarSvgIcon: toolbarIcon,
                     librarySvgIcon: libraryIcon,
-                    onClick: () => checkAuth(() => this.openLibraryView())
+                    onClick: () => this.openLibraryView()
                 },
                 getWidgetMenuItems: (widgets) => this.getWidgetMenuItems(widgets)
             }
@@ -80,7 +80,7 @@ class Main {
             {
                 tooltip: 'edit C4 structure',
                 svgIcon: editIcon,
-                onClick: () => checkAuth(() => this.openEditView(widget.id, isDiagram))
+                onClick: () => this.openEditView(widget.id, isDiagram)
             }
         ];
 
@@ -124,4 +124,4 @@ class Main {
 }
 
 const main = new Main();
-main.init().then(() => main.addListeners());
+main.init().then(() => checkAuth(main.addListeners()));
