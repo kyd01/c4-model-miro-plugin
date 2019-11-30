@@ -20,6 +20,8 @@ module.exports = function (env) {
             index: './src/index.view.ts',
             library: './src/library/library.view.ts',
             edit: './src/edit/edit.view.ts',
+            'auth-success': './src/auth-success/auth-success.view.ts',
+            'not-authorized': './src/not-authorized/not-authorized.view.ts',
         },
         output: {
             filename: '[name].js',

@@ -68,7 +68,7 @@ declare module SDK {
     }
 
     interface AuthorizationOptions {
-        response_type: 'code' | 'token'
+        response_type: string
         scope?: string
         redirect_uri?: string
         state?: string

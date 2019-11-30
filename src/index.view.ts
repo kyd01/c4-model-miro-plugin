@@ -12,6 +12,7 @@ import IContextMenuItem = SDK.IContextMenuItem;
 import IWidget = SDK.IWidget;
 import MiroEvent = SDK.Event;
 import {getModel} from "./functions/get-model";
+import {checkAuth} from "./functions/check-auth";
 
 class Main {
     private get config(): IPluginConfig {
@@ -21,7 +22,7 @@ class Main {
                     title: 'C4 model',
                     toolbarSvgIcon: toolbarIcon,
                     librarySvgIcon: libraryIcon,
-                    onClick: () => this.openLibraryView()
+                    onClick: () => checkAuth(() => this.openLibraryView())
                 },
                 getWidgetMenuItems: (widgets) => this.getWidgetMenuItems(widgets)
             }
@@ -79,7 +80,7 @@ class Main {
             {
                 tooltip: 'edit C4 structure',
                 svgIcon: editIcon,
-                onClick: () => this.openEditView(widget.id, isDiagram)
+                onClick: () => checkAuth(() => this.openEditView(widget.id, isDiagram))
             }
         ];
 
