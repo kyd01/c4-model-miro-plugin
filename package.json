@@ -1,0 +1,43 @@
+{
+  "name": "c4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && webpack --env.production",
+    "dev": "webpack --env.development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/kyd01/c4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@types/webpack-env": "^1.13.9",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "del": "^5.1.0",
+    "file-loader": "^5.0.2",
+    "gulp": "^4.0.2",
+    "gulp-flatten": "^0.4.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "rimraf": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.2",
+    "uglifyjs-webpack-plugin": "^2.1.3",
+    "vinyl-ftp": "^0.6.1",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  },
+  "homepage": "https://bitbucket.org/kyd01/c4#readme",
+  "dependencies": {}
+}

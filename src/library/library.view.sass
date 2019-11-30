@@ -1,0 +1,66 @@
+$offset: 15px
+
+html, body
+  height: 100%
+  margin: 0
+  padding: 0
+
+body
+  font-family: OpenSans, Arial, Helvetica, sans-serif
+  font-size: 14px
+
+main
+  padding: $offset
+  overflow-y: auto
+  height: calc(100% - #{$offset * 2})
+
+.description
+  padding-top: $offset
+  border-top: 1px solid rgba(0, 0, 0, 0.16)
+  margin-top: 5px
+
+.c4-objects
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+
+.c4-object
+  $size: 100px
+  width: $size
+  height: $size
+  float: left
+  border: 1px solid black
+  margin-bottom: $offset
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  user-select: none
+
+  &[data-type="person"]
+    background: #7ddc73
+    color: #000000
+    border-color: #5bc150
+
+  &[data-type="external-context"]
+    background: #999999
+    color: #ffffff
+    border-color: #757575
+
+  &[data-type="context"]
+    background: #1268bd
+    color: #ffffff
+    border-color: #1a61a7
+
+  &[data-type="container"]
+    background: #438cd4
+    color: #ffffff
+    border-color: #3379bd
+
+  &[data-type="component"]
+    background: #86bcf0
+    color: #000000
+    border-color: #70a5d8
+
+.diagram
+  border-style: dashed

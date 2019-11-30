@@ -1,0 +1,1 @@
+export const getWidget = (id: string) => miro.board.widgets.get(['id', id]).then((widgets) =>  widgets[0]);
