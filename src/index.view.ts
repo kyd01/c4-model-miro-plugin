@@ -124,4 +124,4 @@ class Main {
 }
 
 const main = new Main();
-main.init().then(() => checkAuth(main.addListeners()));
+main.init().then(() => checkAuth(() => main.addListeners()));
